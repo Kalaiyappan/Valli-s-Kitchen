@@ -1,0 +1,153 @@
+
+/**/
+.lightbox-nav {
+  position: relative;
+  margin-bottom: 12px; /* the font-size of .btn-xs */
+  height: 22px;
+  text-align: center;
+  font-size: 0; /* prevent the otherwise inherited font-size and line-height from adding extra space to the bottom of this div */
+}
+
+.lightbox-nav .btn-group {
+  vertical-align: top;
+}
+
+.lightbox-nav .close {
+  /* absolutely position this in order to center the nav buttons */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.lightbox-image-container {
+  position: relative;
+  text-align: center; /* center the image */
+}
+
+/* the caption overlays the top left corner of the image */
+.lightbox-image-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.5em 0.9em; /* the left and right margins are offset by 0.4em for the span box-shadow */
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 0.1em 0.1em 0.2em rgba(255, 255, 255, 0.5);
+}
+
+.lightbox-image-caption span {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background-color: rgba(255, 255, 255, 0.75);
+  /* pad the left and right of each line of text */
+  box-shadow: 0.4em 0 0 rgba(255, 255, 255, 0.75),
+    -0.4em 0 0 rgba(255, 255, 255, 0.75);
+}
+#text_columns article.column1, #text_columns .column2
+{
+  margin: 70px 0;
+  font-size:14px;
+  float:left;
+  width:450px;
+}
+#text_columns .column2
+{
+  margin: 120px 0;
+}
+.row
+{
+  position:relative;
+  margin: 40px 0 0 50px;
+  float:right;
+  width:350px;
+}
+.rocket:hover
+{
+  opacity:0;
+  transition: opacity 0.4s ease 0.2s;
+  animation-name: stylie-transform-keyframes;
+  animation-duration: 700ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  transform-origin: 0 0;
+}
+
+.clock:hover
+{
+  animation-name: stylie-transform2-keyframes;
+  animation-duration: 100ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 0 0;
+}
+
+/* KEYFRAMES */
+
+@keyframes stylie-transform-keyframes
+{
+  0%
+  {
+    transform:translateX(30px) translateY(46px) rotate(0deg) translate(-50%, -50%);
+    animation-timing-function: cubic-bezier(.25,.25,.75,.75);
+  }
+100%
+  {
+    transform:translateX(260px) translateY(-150px) rotate(0deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes stylie-transform2-keyframes
+{
+  0%
+  {
+    transform:translateX(40px) translateY(40px) rotate(0deg) translate(-50%, -50%);
+    animation-timing-function: cubic-bezier(.25,.25,.75,.75);
+  }
+  100%
+  {
+    transform:translateX(50px) translateY(40px) rotate(0deg) translate(-50%, -50%);
+  }
+}
+footer
+{
+  position:relative;
+  clear:both;
+  width:auto;
+  height:350px;
+  background:#333333;
+}
+footer .wrapper
+{
+  line-height:25px;
+  margin: 0 auto;
+  padding-top:30px;
+  width:auto;
+  max-width:900px;
+  font-size:14px;
+}
+footer .wrapper .column
+{
+  font-family: 'Open Sans', sans-serif;
+  color:#ababab;
+  float:left;
+  width:280px;
+  margin-right:20px;
+}
+footer .wrapper .column.midlist ul li
+{
+  width:auto;
+  padding:0 0 10px 25px;
+  margin-bottom:10px;
+  border-bottom: 1px solid #444444;
+  background:url(img/arrowright2.png) left 6px no-repeat;
+}
+footer .wrapper .column.midlist ul li a:hover
+{
+  color:#fff;
+}
