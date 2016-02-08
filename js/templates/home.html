@@ -1,0 +1,104 @@
+			<section class="container" ng-controller="MainController">
+				<div>
+			    	<uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+			      		<uib-slide ng-repeat="slide in slides" active="slide.active">
+			        		<img ng-src="{{slide.image}}" style="margin:auto;">
+			        		<div class="carousel-caption">
+			        			<h4>Slide {{$index}}</h4>
+			        			<p>{{slide.text}}</p>
+			        		</div>
+      					</uib-slide>
+    				</uib-carousel>
+    			</div>
+  			</section>
+  			<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  			<!--<a href="#" onclick="signOut();">Sign out</a>-->
+  			<section id="spacer">
+				<h2 class="hidden">Dolor sit amet</h2>
+				<p>Search the latest recipes here</p>
+				<div class="search">
+					<form action="#">
+						<input type="text" name="sitesearch" value="Enter a word..."/>
+						<input type="submit" name="start_search" class="button" value="Search"/>
+					</form>
+				</div>
+			</section>
+			<!--<section id="boxcontent">
+				<h2 class="hidden">Adipiscing</h2>
+				<article>
+					<img src="img/some_icon.png" alt="alt text"/>
+					<h3>Lorem ipsum</h3>
+					<p>
+						Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen.
+					</p>
+				</article>
+				<article>
+					<img src="img/some_icon.png" alt="alt text"/>
+					<h3>Consectetuer</h3>
+					<p>
+						Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen...
+					</p>
+				</article>
+				<article>
+					<img src="img/some_icon.png" alt="alt text"/>
+					<h3>Dolor sit amet</h3>
+					<p>
+						Es packte seine sieben Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.
+					</p>
+				</article>
+				<br class="clear"/>
+			</section>-->
+			<section id="four_columns">
+				<h2>Quick Menu</h2>
+				<article class="img-item">
+					<h3 class="hidden">Dolor sit amet</h3>
+					<figure>
+						<a href="" rel="lightbox" title="Some Title">
+						<span class="thumb-screen"></span>
+						<img src="" alt="Some alt text"/></a>
+						<figcaption>
+							<strong>
+							Photo by: Some Name</strong>
+							Als es die ersten Hügel des Kursivgebirges erklommen hatte
+						</figcaption>
+					</figure>
+				</article>
+				<article class="img-item">
+					<h3 class="hidden">Sit Amet</h3>
+					<figure>
+						<a href="" rel="lightbox" title="Some Title">
+						<span class="thumb-screen"></span>
+						<img src="" alt="Some alt text"/></a>
+						<figcaption>
+							<strong>
+							Photo by: Some Name</strong>
+							warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen
+						</figcaption>
+					</figure>	
+				</article>
+				<article class="img-item">
+					<h3 class="hidden">Dolor Sit</h3>
+					<figure>
+						<a href="" rel="lightbox" title="Some Title">
+						<span class="thumb-screen"></span>
+						<img src="" alt="Some alt text"/></a>
+						<figcaption>
+							<strong>Photo by: Some Name</strong>
+							die Headline von Alphabetdorf und die Subline seiner eigenen Straße.
+						</figcaption>
+					</figure>
+				</article>
+				<article class="img-item">
+					<h3 class="hidden">Lorem Ipsum</h3>
+					<figure>
+						<a href="" rel="lightbox" title="Some Title">
+						<span class="thumb-screen"></span>
+						<img src="" alt="Some alt text"/></a>
+						<figcaption>
+							<strong>Photo by: Some Name</strong>
+							Wehmütig lief ihm eine rhetorische Frage über die Wange.
+						</figcaption>
+					</figure>
+				</article>
+				<br class="clear"/>
+			</section>

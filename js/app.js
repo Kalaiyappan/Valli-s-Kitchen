@@ -1,29 +1,48 @@
-var app = angular.module("bootstrap",['ngAnimate', 'ui.bootstrap']);
+var valliapp = angular.module('valliapp',['ngRoute','vallikitchenControllers']);
 
-app.controller('CarouselDemoCtrl', function ($scope) {
-  $scope.myInterval = 5000;
-  $scope.noWrapSlides = false;
-  var slides = $scope.slides ;
-  $scope.addSlide = function() {
-    //var newWidth = 600 + slides.length + 1;
-    $scope.slides = [{
-      image: 'images/slide-image1.jpg',
-      text: 'Slide Image - One'
-    },{
-      image: 'images/slide-image2.jpg',
-      text: 'Slide Image - Two'
-    },{
-      image: 'images/slide-image3.jpg',
-      text: 'Slide Image - Three'
-    },{
-      image: 'images/slide-image4.jpg',
-      text: 'Slide Image - Four'
-    },{
-      image: 'images/slide-image5.jpg',
-      text: 'Slide Image - Five'
-    }];
-  };
-  for (var i=0; i<4; i++) {
-    $scope.addSlide();
-  }
+valliapp.config(function($routeProvider,$locationProvider){
+    $routeProvider.when('/', {
+      //console.log('Entering Home');
+      templateUrl:'js/templates/home.html',
+      controller:'MainController'
+    });
+    $routeProvider.when('/Portfolio', {
+      //console.log('Entering Portfolio');
+      templateUrl:'js/templates/portfolio.html',
+      controller:'MainController'
+    });
+    $routeProvider.when('/About', {
+      //console.log('Entering Portfolio');
+      templateUrl:'js/templates/about.html',
+      controller:'MainController'
+    });
+    $routeProvider.when('/Contact-Us', {
+      //console.log('Entering Portfolio');
+      templateUrl:'js/templates/contact-us.html',
+      controller:'MainController'
+    });
+    $routeProvider.otherwise({
+        redirectTo: '/'
+     });
+    $locationProvider.html5Mode(true);
+    /*$locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });*/
 });
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+
+function signOut() {
+  alert("Entering SignOut");
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }

@@ -113,9 +113,15 @@ nav ul li a:hover{
 }
 .container
 {
-	width:auto;
-	margin: 0 auto;
+	width:50%;
+	margin: 0;
+	padding: 0;
 	position:relative;
+}
+.g-signin2{
+	border:solid 1px red;
+	position:absolute;
+	--float:right;
 }
 #slider_content1 h3, #slider_content2 h3, #slider_content3 h3
 {
